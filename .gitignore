@@ -1,0 +1,69 @@
+# .gitignore para projetos de Data Science / ML
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data (arquivos grandes - use DVC)
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+*.csv
+*.tsv
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Models (use MLflow / Model Registry)
+models/*.pkl
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.joblib
+*.model
+
+# Logs
+logs/
+*.log
+mlruns/
+wandb/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Docker
+docker-compose.override.yml
+
+# OS
+.DS_Store
+Thumbs.db
